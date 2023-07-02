@@ -36,11 +36,11 @@ app.get("/test", function (req, res) {
 
 const translateWord = async (test) => {
   console.log(
-    `https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&lang=auto&url=${test.url}`
+    `https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&lang=en&url=${test.url}`
   );
 
   const response = await fetch(
-    `https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&lang=auto&url=${test.url}`,
+    `https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&lang=en&url=${test.url}`,
     {
       method: "POST",
     }
