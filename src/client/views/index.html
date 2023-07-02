@@ -23,15 +23,48 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             </section>
 
             <section>
                 <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div id="results">
+                    <table>
+						<tbody>
+                            <tr>
+                                <td>Agreement</td>
+                                <td>
+                                    <p id="agreement"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Confidence</td>
+                                <td>
+                                    <p id="confidence"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Irony</td>
+                                <td id="irony"> </td>
+                            </tr>
+                            <tr>
+                                <td>Polarity</td>
+                                <td><p id="polarity"></p></td>
+                            </tr>
+
+                            <tr>
+                                <td>Subjectivity</td>
+                                <td> <p id="subjectivity"></p></td>
+                            </tr>
+
+
+                        </tbody>
+
+					</table>
+                </div>
             </section>
         </main>
 
@@ -39,5 +72,14 @@
             <p>This is a footer</p>
         </footer>
 
+        <!-- <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script> -->
     </body>
 </html>
